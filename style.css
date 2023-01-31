@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap");
+
+:root {
+  --very-dark-magenta: hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  height: calc(100vh - 0.1px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  width: 1000px;
+  position: absolute;
+}
+
+.bg__top {
+  position: relative;
+}
+
+h1 {
+  color: var(--very-dark-magenta);
+  font-weight: 700;
+  font-size: 50px;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  color: var(--very-dark-magenta);
+  font-weight: 700;
+  margin-left: 2rem;
+  font-size: 16px;
+}
+
+p {
+  color: var(--dark-grayish-magenta);
+}
+
+span {
+  display: block;
+  color: var(--soft-pink);
+  font-weight: 400;
+}
+
+.header__section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ratings {
+  background-color: var(--light-grayish-magenta);
+  display: flex;
+  align-items: center;
+  padding: 0.8rem 3rem;
+  border-radius: 10px;
+}
+.reviews {
+  margin-top: 2rem;
+}
+
+.guru {
+  translate: 13%;
+}
+
+.besttech {
+  translate: 26%;
+}
+
+.reviews,
+.guru,
+.besttech {
+  margin-bottom: 0.8rem;
+}
+
+.testimonial__container {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.testimonial {
+  background-color: var(--very-dark-magenta);
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.testimonial blockquote {
+  margin-top: 1rem;
+  color: white;
+}
+
+.avatar {
+  display: flex;
+  align-items: center;
+}
+.avatar img {
+  max-width: 50px;
+  border-radius: 50%;
+}
+
+.avatar h3 {
+  margin-left: 1.5rem;
+  font-weight: 400;
+
+  color: white;
+}
+
+.testimonial:nth-child(2) {
+  margin-top: 2rem;
+}
+
+.testimonial:nth-child(3) {
+  margin-top: 4rem;
+}
+
+@media (max-width: 814px) {
+  main {
+    margin: 0 2rem;
+  }
+
+  h2 {
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+  br {
+    display: none;
+  }
+  .header__section {
+    flex-direction: column;
+  }
+
+  .ratings {
+    flex-direction: column;
+  }
+
+  .guru,
+  .besttech {
+    translate: none;
+  }
+  .testimonial__container {
+    flex-direction: column;
+  }
+
+  .testimonial:nth-child(2) {
+    margin-top: 0;
+  }
+
+  .testimonial:nth-child(3) {
+    margin-top: 0;
+  }
+
+  .avatar {
+    margin-bottom: 1rem;
+  }
+}
